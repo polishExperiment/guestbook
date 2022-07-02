@@ -17,16 +17,16 @@ class Comment
 
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\NotBlank]
-    private string $author;
+    private $author;
 
     #[ORM\Column(type: 'text')]
     #[Assert\NotBlank]
-    private string $text;
+    private $text;
 
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\NotBlank]
     #[Assert\Email]
-    private string $email;
+    private $email;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private \DateTimeImmutable $createdAt;
